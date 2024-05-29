@@ -21,3 +21,4 @@ jobs:
           local_path: './public/*'
           remote_path: '/home/rpsiteadmin/responsepoint.com/'
           sftp_only: true
+          delete_remote_files: true
