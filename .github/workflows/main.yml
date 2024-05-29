@@ -1,0 +1,22 @@
+name: Deploy website to SiteGround FTP
+on:
+  push:
+    branches:
+      - prod
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v3
+
+      - name: Push files to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: './'
+          server-dir: '/home/rpsiteadmin/responsepoint.com/'
+          dry-run: true
