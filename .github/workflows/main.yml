@@ -17,6 +17,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
           local-dir: './'
           server-dir: '/home/rpsiteadmin/responsepoint.com/'
           dry-run: true
