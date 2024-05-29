@@ -12,13 +12,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Push files to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
-          protocol: ftps
-          local-dir: './'
-          server-dir: '/home/rpsiteadmin/responsepoint.com/'
-          dry-run: true
+          local_path: './'
+          remote_path: '/home/rpsiteadmin/responsepoint.com/'
+          sftp_only: true
