@@ -18,7 +18,7 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
-          local_path: './public/*'
+          local_path: './docs/*'
           remote_path: '/home/rpsiteadmin/responsepoint.com/'
           sftp_only: true
           delete_remote_files: true
