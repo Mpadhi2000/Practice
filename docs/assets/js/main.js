@@ -11834,9 +11834,18 @@ $(function () {
 //Only for Development Environment
 if (window.location.host.indexOf('dev.') == 0) {
   let tempTag = document.createElement('div')
-  tempTag.style.backgroundColor = 'lightblue'
-  tempTag.style.fontWeight = 'bold'
-  tempTag.append('Development Site')
+  //Adding Styling
+  Object.assign(tempTag.style, {
+    'background-color': '#fba50059',
+    'font-weight': 'bold',
+    'position': 'fixed',
+    'top': '0',
+    'z-index': '1000',
+    'padding': '3px 8px',
+    'border-radius': '5px'
+  });
+
+  tempTag.append('Dev Site')
   document.querySelector('body').prepend(tempTag)
 }
 
