@@ -97,6 +97,7 @@ $(document).ready(function () {
     // Define the PDF URLs based on the page name
     var pdfUrl = "";
 
+    // console.log(pageName);
     switch (pageName) {
       // case "vonage-casestudy":
       //   pdfUrl = "assets/downloads/VonageOverallCaseStudy.pdf";
@@ -118,6 +119,9 @@ $(document).ready(function () {
         break;
       case "telemarketing-sale":
         pdfUrl = "assets/downloads/Telemarketing_Sale.pdf";
+        break;
+      case "re-engagement-roi":
+        pdfUrl = "assets/downloads/Re-engagement_Campaign_Quadruples_Expected_ROI.pdf";
         break;
       // case "symantec-casestudy":
       //   pdfUrl = "assets/downloads/SymantecCaseStudy.pdf";
